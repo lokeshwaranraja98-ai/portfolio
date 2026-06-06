@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lokesh Raja | Portfolio</title>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(15,23,42,.9);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav h2{
+color:#38bdf8;
+}
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.contact a:hover{
+    text-decoration:underline;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.typing{
+font-size:1.6rem;
+font-weight:600;
+margin-bottom:20px;
+color:#38bdf8;
+}
+
+.hero p{
+max-width:800px;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 28px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#38bdf8;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+padding:25px;
+border-radius:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.skills-grid,
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+ul{
+padding-left:20px;
+margin-top:10px;
+}
+
+.project-card{
+background:rgba(255,255,255,.05);
+padding:25px;
+border-radius:20px;
+transition:.4s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:15px 0;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.typing{
+font-size:1.2rem;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+#languages ul{
+    list-style:none;
+    padding-left:0;
+}
+
+#languages li{
+    background:rgba(255,255,255,0.05);
+    margin:10px 0;
+    padding:12px;
+    border-radius:10px;
+    border-left:4px solid #38bdf8;
+    transition:0.3s;
+}
+
+#languages li:hover{
+    transform:translateX(8px);
+    background:rgba(56,189,248,0.1);
+}
+
+.bar{
+    width:100%;
+    background:#1e293b;
+    height:10px;
+    border-radius:10px;
+    margin-bottom:15px;
+    overflow:hidden;
+    position:relative;
+}
+
+.fill{
+    height:100%;
+    border-radius:10px;
+    background:#38bdf8;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    padding-right:10px;
+    color:white;
+    font-size:12px;
+    font-weight:600;
+    position:relative;
+}
+
+.fill{
+    animation:loadBar 1.5s ease-in-out;
+}
+
+@keyframes loadBar{
+    from{ width:0; }
+}
+
+.tamil{ width:100%; }
+.english{ width:90%; }
+.german{ width:10%; }
+
+</style>
+</head>
+<body>
+
+<nav>
+<h2>Lokeshwaran R</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<h1 data-aos="zoom-in">
+Hi, I'm <span>Lokeshwaran R</span>
+</h1>
+
+<div class="typing" id="typing"></div>
+
+<p data-aos="fade-up">
+Passionate about building innovative software solutions,
+exploring Artificial Intelligence, and continuously
+improving my technical skills.
+</p>
+
+<a href="#projects" class="btn">View Projects</a>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title" data-aos="fade-up">
+About Me
+</h2>
+
+<div class="card" data-aos="fade-right">
+
+<p>
+I'm Lokeshwaran R, an AI&ML engineering student with
+a strong interest in Software Development,
+Artificial Intelligence & Machine Learning, and Problem Solving.
+</p>
+
+<br>
+
+<p>
+I enjoy transforming ideas into practical applications
+and continuously learning new technologies.
+My goal is to build a successful career in the
+global technology industry.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title" data-aos="fade-up">
+Skills
+</h2>
+
+<div class="skills-grid">
+
+<div class="card" data-aos="flip-left">
+<h3>Programming</h3>
+<ul>
+<li>Python</li>
+<li>SQL</li>
+<li>JavaScript</li>
+<li>HTML</li>
+</ul>
+</div>
+
+<div class="card" data-aos="flip-left" data-aos-delay="100">
+<h3>Web Development</h3>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Firebase</li>
+</ul>
+</div>
+
+<div class="card" data-aos="flip-left" data-aos-delay="200">
+<h3>Tools</h3>
+<ul>
+<li>Visual Studio</li>
+<li>GitHub</li>
+<li>Firebase</li>
+<li>Power BI</li>
+<li>MySQL</li>
+<li>Canvas</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<section id="languages">
+
+<h2 class="section-title" data-aos="fade-up">
+Languages
+</h2>
+
+<div class="card" data-aos="fade-up">
+
+<p>Tamil</p>
+<div class="bar"><div class="fill tamil"><span>100%</span></div></div>
+
+<p>English</p>
+<div class="bar"><div class="fill english"><span>90%</span></div></div>
+
+<p>German (Learning)</p>
+<div class="bar"><div class="fill german"><span>10%</span></div></div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title" data-aos="fade-up">
+Projects
+</h2>
+
+<div class="projects-grid">
+
+<div class="project-card" data-aos="zoom-in">
+<h3>Acessible Hiring</h3>
+<br>
+<p>
+Developed an Fully accessible hiring platform to improve job search experiences for individuals with disabilities.
+</p>
+</div>
+
+<div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+<h3>Portfolio Website</h3>
+<br>
+<p>
+Designed and developed a responsive personal
+portfolio website.
+</p>
+</div>
+
+<div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+<h3>AINEX</h3>
+<br>
+<p>
+Built AI powered Smart Resume Analyzer used against job descriptions and generate a compatibility score with improvement suggestions.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title" data-aos="fade-up">
+Contact
+</h2>
+
+<div class="card contact" data-aos="fade-up">
+
+<p>📧 
+    <a href="mailto:lokeswaranrajamce@gmail.com">lokeswaranrajamce@gmail.com</a>
+</p>
+<p>📱 +91 8925135664</p>
+<p>💻 GitHub:
+    <a href="https://github.com/lokeshwaran0612" target="_blank">https://github.com/lokeshwaran0612</a>
+</p>
+<p>🔗 LinkedIn:
+    <a href="https://www.linkedin.com/in/lokeshwaran-r-61b756338" target="_blank">https://www.linkedin.com/in/lokeshwaran-r-61b756338</a>
+</p>
+<p>📍 K.K.Nagar, Chennai, Tamil Nadu, India</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>Building the future through code and innovation.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+duration:1000,
+once:true
+});
+
+const roles = [
+"Engineering Student",
+"AI&ML Enthusiast",
+"Software Developer",
+"Future ML Engineer "
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typingElement = document.getElementById("typing");
+
+function typeEffect(){
+
+let currentRole = roles[roleIndex];
+
+if(!deleting){
+typingElement.textContent =
+currentRole.substring(0,charIndex++);
+
+if(charIndex > currentRole.length){
+deleting = true;
+setTimeout(typeEffect,1500);
+return;
+}
+}
+else{
+typingElement.textContent =
+currentRole.substring(0,charIndex--);
+
+if(charIndex === 0){
+deleting = false;
+roleIndex = (roleIndex + 1) % roles.length;
+}
+}
+
+setTimeout(typeEffect,
+deleting ? 60 : 120);
+
+}
+
+typeEffect();
+
+</script>
+
+</body>
+</html>

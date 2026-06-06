@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Kousalya 💙</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      max-width: 420px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      font-size: 18px;
+    }
+
+    input {
+      padding: 10px;
+      width: 80%;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .unlock {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .yes {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .no {
+      background: #f44336;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PASSWORD PAGE -->
+  <div class="card" id="lockScreen">
+    <h1>🔐 Secret Page</h1>
+    <p>
+      This page is made specially for you<br>
+      <strong>Kousalya 💙</strong>
+    </p>
+    <p>Enter the secret code to continue</p>
+    <input type="password" id="password" placeholder="Enter secret code">
+    <br>
+    <button class="unlock" onclick="checkPassword()">Unlock ✨</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="sachein.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const secretCode = "kousalya0912";
+
+    function checkPassword() {
+      const entered = document.getElementById("password").value;
+      if (entered === secretCode) {
+        document.getElementById("bgMusic").play();
+        showProposal();
+      } else {
+        document.getElementById("error").innerText = "Wrong code 😅 Try again";
+      }
+    }
+
+    function showProposal() {
+      document.body.innerHTML = `
+        <div class="card">
+          <h1>Hey Kousalya 💙</h1>
+          <p>
+            I just wanted to be honest with you.<br><br>
+            Talking to you makes my days brighter and calmer.
+            There’s no pressure, no expectations —
+            just a small question from the heart.
+          </p>
+          <p><strong>Would you like to be my friend?</strong></p>
+
+          <button class="yes" onclick="yesClicked()">Yes 😊</button>
+          <button class="no" onclick="noClicked()">No 😅</button>
+        </div>
+      `;
+    }
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div class="card">
+          <h1>Thank You 💙</h1>
+          <p>
+            That genuinely means a lot to me.<br><br>
+            I’m really happy and excited for the
+            friendship ahead 🌸
+            here is my insta ID <a href="https://www.instagram.com/loki_pvt_06?igsh=MWo2b2NyM2ZlNnI3cA==" target="_blank">@loki_pvt_06</a>😄
+            For more conversations, laughs, and memories together!💙
+          </p>
+        </div>
+      `;
+    }
+
+    function noClicked() {
+      document.body.innerHTML = `
+        <div class="card">
+          <h1>That’s okay 🌷</h1>
+          <p>
+            Thank you for being honest.<br><br>
+            I respect your feelings and truly wish you
+            happiness always 😊
+          </p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
